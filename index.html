@@ -95,6 +95,18 @@
         .sinking-card {
              animation: subtle-sink 8s ease-in-out infinite;
         }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+        }
+        .whatsapp-pulse {
+            animation: pulse 2s infinite;
+        }
 
 
         .fade-in-up {
@@ -168,7 +180,7 @@
             </div>
         </section>
 
-        <!-- SECTION 1 – The Pain & The Promise (REDESIGNED) -->
+        <!-- SECTION 1 – The Pain & The Promise -->
         <section class="py-24 sm:py-32 relative fade-in-up">
              <div class="absolute inset-0 z-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255, 121, 63, 0.07) 1px, transparent 0); background-size: 30px 30px;"></div>
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -268,17 +280,17 @@
 
                 <div class="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     <div class="glass-card p-6 text-center flex flex-col items-center">
-                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.136 12.006a8.25 8.25 0 0113.728 0M1.984 8.974a12 12 0 0119.032 0M15.75 18.75a3 3 0 00-5.454-2.122A3 3 0 006.3 18.75m1.5-3.75a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008zm4.5 0a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z" /></svg>
+                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8.7V5.3a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3.4"/><path d="m22 12-4.1 4.1a2.1 2.1 0 0 1-3-3L19 9"/><path d="m14 13 1.5 1.5"/><path d="m22 12-4.1 4.1a2.1 2.1 0 0 1-3-3L19 9"/></svg>
                         <h3 class="text-xl font-bold text-white">Instant Share</h3>
                         <p class="mt-2 text-gray-400">One tap shares your entire profile—contact info, socials, websites, payment apps, and more.</p>
                     </div>
                     <div class="glass-card p-6 text-center flex flex-col items-center">
-                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M2 12h20"/><path d="M12 2a15 15 0 1 0 0 20 15 15 0 0 0 0-20Z"/></svg>
                         <h3 class="text-xl font-bold text-white">Universally Compatible</h3>
                         <p class="mt-2 text-gray-400">No apps, no friction. Works instantly on any modern smartphone, iOS or Android.</p>
                     </div>
                     <div class="glass-card p-6 text-center flex flex-col items-center">
-                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.182-3.182m0-4.991v4.99" /></svg>
+                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0-10-10"/><path d="M12 15a5.1 5.1 0 0 0 5-5"/><path d="m12 8 3 3-3 3"/><path d="M22 12a10 10 0 0 0-10-10"/><path d="m12 9-3-3 3-3"/></svg>
                         <h3 class="text-xl font-bold text-white">Dynamic Profile</h3>
                         <p class="mt-2 text-gray-400">Changed your number or title? Update your profile anytime, and the changes are live instantly.</p>
                     </div>
@@ -317,7 +329,7 @@
                     <!-- Step 1 -->
                     <div class="relative glass-card p-8 flex flex-col items-center">
                         <div class="flex items-center justify-center h-24 w-24 rounded-full bg-orange-500/20 text-orange-300 mx-auto border border-orange-500/30">
-                            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9.75v4.5a2.25 2.25 0 01-2.25 2.25H4.5A2.25 2.25 0 012.25 14.25v-4.5m19.5 0a2.25 2.25 0 00-2.25-2.25H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 11.91a2.25 2.25 0 01-1.07-1.916V9.75" /></svg>
+                            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M15 15h2"/></svg>
                         </div>
                         <h3 class="mt-6 text-2xl font-semibold text-white">1. Tap Your Card</h3>
                         <p class="mt-2 text-gray-400">Tap your OPTAP card on any modern smartphone to initiate the connection.</p>
@@ -325,7 +337,7 @@
                     <!-- Step 2 -->
                     <div class="relative glass-card p-8 flex flex-col items-center">
                         <div class="flex items-center justify-center h-24 w-24 rounded-full bg-orange-500/20 text-orange-300 mx-auto border border-orange-500/30">
-                            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2.5"/><path d="m19 18-3-3m0 3 3-3"/><path d="M12 8h-4"/><path d="M12 12H8"/><path d="M9 16H5"/></svg>
                         </div>
                         <h3 class="mt-6 text-2xl font-semibold text-white">2. Share Your Profile</h3>
                         <p class="mt-2 text-gray-400">A link to your customizable profile appears instantly. No apps needed.</p>
@@ -333,11 +345,52 @@
                     <!-- Step 3 -->
                     <div class="relative glass-card p-8 flex flex-col items-center">
                         <div class="flex items-center justify-center h-24 w-24 rounded-full bg-orange-500/20 text-orange-300 mx-auto border border-orange-500/30">
-                            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.409 0L18 18.72m-7.5-2.962a3.75 3.75 0 00-5.409 0L6 18.72m0-2.962A3.75 3.75 0 016 12.75h12A3.75 3.75 0 0118 15.75m-12 0v3.375c0 .621.504 1.125 1.125 1.125h1.5a1.125 1.125 0 011.125-1.125v-3.375m9 0v3.375c0 .621.504 1.125 1.125 1.125h1.5a1.125 1.125 0 011.125-1.125v-3.375" /></svg>
+                            <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <h3 class="mt-6 text-2xl font-semibold text-white">3. Grow Your Network</h3>
                         <p class="mt-2 text-gray-400">They save your contact card, and you've made a lasting impression.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 – Environmental Impact -->
+        <section class="py-24 bg-black fade-in-up">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Leave a Mark, Not a Footprint.</h2>
+                    <p class="mt-4 text-lg text-gray-400">Choosing OPTAP is more than a smart business decision—it’s a commitment to a healthier planet. See the impact of switching from paper.</p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Stat Card 1: The Waste -->
+                    <div class="glass-card p-8 text-center flex flex-col items-center border border-gray-800">
+                        <svg class="w-12 h-12 mb-4 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.134-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.067-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white">7+ Billion Cards</h3>
+                        <p class="mt-2 text-gray-400">Printed and thrown away annually, contributing to landfill waste.</p>
+                    </div>
+                    <!-- Stat Card 2: The Forest -->
+                     <div class="glass-card p-8 text-center flex flex-col items-center border border-gray-800">
+                        <svg class="w-12 h-12 mb-4 text-orange-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M18.38 4.992a7.5 7.5 0 00-12.76 6.036c0 .65.07 1.286.206 1.903 1.256 4.35 4.333 7.03 7.174 7.03s5.918-2.68 7.174-7.03c.136-.617.206-1.253.206-1.903a7.5 7.5 0 00-2-5.028zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
+                           <path d="M12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white">500,000 Trees</h3>
+                        <p class="mt-2 text-gray-400">The approximate number of trees cut down each year just for business cards.</p>
+                    </div>
+                    <!-- Stat Card 3: The Solution -->
+                    <div class="glass-card p-8 text-center flex flex-col items-center border border-green-500/50 bg-green-500/5">
+                        <svg class="w-12 h-12 mb-4 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.182-3.182m0-4.991v4.99" />
+                        </svg>
+                        <h3 class="text-3xl font-bold text-white">One OPTAP Card</h3>
+                        <p class="mt-2 text-gray-400">Replaces thousands of paper cards over its lifetime. A single, sustainable choice.</p>
+                    </div>
+                </div>
+                 <div class="mt-12 text-center">
+                    <p class="text-lg text-gray-300">Make your first impression a statement for your brand <span class="font-bold text-white">and</span> for the planet.</p>
                 </div>
             </div>
         </section>
@@ -429,9 +482,9 @@
     </footer>
 
     <!-- Pricing Modal -->
-    <div id="pricing-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 items-center justify-center p-4 transition-opacity duration-300">
-        <div class="glass-card w-full max-w-4xl rounded-2xl p-8 relative transform transition-transform duration-300 scale-95" id="modal-content">
-            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors">
+    <div id="pricing-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-300 overflow-y-auto">
+        <div class="glass-card w-full max-w-4xl rounded-2xl p-8 relative transform transition-transform duration-300 scale-95 my-auto" id="modal-content">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors z-10">
                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
             <div class="text-center">
@@ -470,6 +523,11 @@
             </div>
         </div>
     </div>
+    
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-8 right-8 z-40 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg whatsapp-pulse transform transition-transform hover:scale-110">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.296-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -495,7 +553,7 @@
 
             const openModal = () => {
                 modal.classList.remove('hidden');
-                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 setTimeout(() => {
                     modal.style.opacity = '1';
                     modalContent.style.transform = 'scale(1)';
@@ -507,7 +565,7 @@
                 modalContent.style.transform = 'scale(0.95)';
                 setTimeout(() => {
                     modal.classList.add('hidden');
-                    modal.classList.remove('flex');
+                    document.body.style.overflow = ''; // Restore background scrolling
                 }, 300);
             };
 
@@ -521,6 +579,12 @@
             closeModalButton.addEventListener('click', closeModal);
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
+                    closeModal();
+                }
+            });
+             // Close modal with Escape key
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
                     closeModal();
                 }
             });
