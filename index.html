@@ -39,6 +39,20 @@
             transform: translateY(-4px) scale(1.02);
             box-shadow: 0 8px 30px rgba(255, 121, 63, 0.6);
         }
+        
+        .glass-button {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            color: var(--accent);
+        }
 
         .glass-card {
             background: var(--bg-card);
@@ -123,6 +137,18 @@
             filter: grayscale(80%) contrast(1.1) brightness(0.8);
             transition: filter 0.5s ease;
         }
+
+        .form-input {
+            background-color: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-primary);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -134,7 +160,10 @@
                 <div class="flex-shrink-0">
                     <a href="#" class="text-3xl font-bold tracking-tighter text-white">OPTAP</a>
                 </div>
-                <div>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="open-design-modal-button glass-button hidden sm:inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-full text-white">
+                        Free Design
+                    </a>
                     <a href="#" class="open-modal-button cta-button inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-full text-white">
                         Get Your OPTAP &rarr;
                     </a>
@@ -167,8 +196,11 @@
                     </div>
                 </div>
 
-                <div class="mt-16">
-                    <a href="#" class="open-modal-button cta-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white">
+                <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="open-design-modal-button glass-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white w-full sm:w-auto">
+                        Get a FREE Design
+                    </a>
+                    <a href="#" class="open-modal-button cta-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white w-full sm:w-auto">
                         Upgrade Your Impression &rarr;
                     </a>
                 </div>
@@ -295,6 +327,16 @@
                         <p class="mt-2 text-gray-400">Changed your number or title? Update your profile anytime, and the changes are live instantly.</p>
                     </div>
                 </div>
+
+                <div class="mt-20 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="open-design-modal-button glass-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white w-full sm:w-auto">
+                        Get a FREE Design
+                    </a>
+                    <a href="#" class="open-modal-button cta-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white w-full sm:w-auto">
+                        Order Your OPTAP &rarr;
+                    </a>
+                </div>
+
             </div>
         </section>
 
@@ -389,8 +431,13 @@
                         <p class="mt-2 text-gray-400">Replaces thousands of paper cards over its lifetime. A single, sustainable choice.</p>
                     </div>
                 </div>
-                 <div class="mt-12 text-center">
-                    <p class="text-lg text-gray-300">Make your first impression a statement for your brand <span class="font-bold text-white">and</span> for the planet.</p>
+                 <div class="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="open-design-modal-button glass-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white w-full sm:w-auto">
+                        Get a FREE Design
+                    </a>
+                    <a href="#" class="open-modal-button cta-button inline-flex items-center justify-center px-10 py-5 border border-transparent text-xl font-bold rounded-full text-white w-full sm:w-auto">
+                        Order Your OPTAP &rarr;
+                    </a>
                 </div>
             </div>
         </section>
@@ -523,6 +570,43 @@
             </div>
         </div>
     </div>
+
+     <!-- Design Request Modal -->
+    <div id="design-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-300 overflow-y-auto">
+        <div id="design-modal-content" class="glass-card w-full max-w-lg rounded-2xl p-8 relative transform transition-transform duration-300 scale-95 my-auto">
+            <button id="close-design-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors z-10">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white">Claim Your FREE Design</h2>
+                <p class="text-gray-400 mt-2">Let our experts design a stunning card that matches your brand.</p>
+            </div>
+
+            <div class="my-6 text-center bg-gray-900/50 rounded-lg p-4">
+                <p class="text-lg text-gray-400">Normal Value: <span class="line-through">3,500 ETB</span></p>
+                <p class="text-4xl font-bold text-green-400">FREE Today</p>
+            </div>
+
+            <form class="space-y-4" action="#">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                    <input type="text" name="name" id="name" class="form-input w-full rounded-md p-2" placeholder="e.g. Abebe Bikila" required>
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-300 mb-1">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" class="form-input w-full rounded-md p-2" placeholder="+251 91 123 4567" required>
+                </div>
+                <div>
+                    <label for="telegram" class="block text-sm font-medium text-gray-300 mb-1">Telegram Handle</label>
+                    <input type="text" name="telegram" id="telegram" class="form-input w-full rounded-md p-2" placeholder="@yourhandle" required>
+                </div>
+                <p class="text-xs text-center text-gray-500 pt-2">We'll send your custom design file directly to your Telegram.</p>
+                <button type="submit" class="cta-button w-full text-center inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-full text-white">
+                    Claim My Free Design
+                </button>
+            </form>
+        </div>
+    </div>
     
     <!-- Sticky WhatsApp Button -->
     <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-8 right-8 z-40 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg whatsapp-pulse transform transition-transform hover:scale-110">
@@ -546,46 +630,94 @@
             });
 
             // Modal logic
-            const modal = document.getElementById('pricing-modal');
-            const modalContent = document.getElementById('modal-content');
+            const pricingModal = document.getElementById('pricing-modal');
+            const pricingModalContent = document.getElementById('modal-content');
             const openModalButtons = document.querySelectorAll('.open-modal-button');
             const closeModalButton = document.getElementById('close-modal-button');
 
-            const openModal = () => {
-                modal.classList.remove('hidden');
+            const openPricingModal = () => {
+                pricingModal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
                 setTimeout(() => {
-                    modal.style.opacity = '1';
-                    modalContent.style.transform = 'scale(1)';
+                    pricingModal.style.opacity = '1';
+                    pricingModalContent.style.transform = 'scale(1)';
                 }, 10);
             };
 
-            const closeModal = () => {
-                modal.style.opacity = '0';
-                modalContent.style.transform = 'scale(0.95)';
+            const closePricingModal = () => {
+                pricingModal.style.opacity = '0';
+                pricingModalContent.style.transform = 'scale(0.95)';
                 setTimeout(() => {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = ''; // Restore background scrolling
+                    pricingModal.classList.add('hidden');
+                     if (document.getElementById('design-modal').classList.contains('hidden')) {
+                        document.body.style.overflow = '';
+                    }
                 }, 300);
             };
 
             openModalButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
-                    openModal();
+                    openPricingModal();
                 });
             });
 
-            closeModalButton.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
+            closeModalButton.addEventListener('click', closePricingModal);
+            pricingModal.addEventListener('click', (e) => {
+                if (e.target === pricingModal) {
+                    closePricingModal();
                 }
             });
-             // Close modal with Escape key
+
+            // Design Modal logic
+            const designModal = document.getElementById('design-modal');
+            const designModalContent = document.getElementById('design-modal-content');
+            const openDesignModalButtons = document.querySelectorAll('.open-design-modal-button');
+            const closeDesignModalButton = document.getElementById('close-design-modal-button');
+
+            const openDesignModal = () => {
+                designModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    designModal.style.opacity = '1';
+                    designModalContent.style.transform = 'scale(1)';
+                }, 10);
+            };
+
+            const closeDesignModal = () => {
+                designModal.style.opacity = '0';
+                designModalContent.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    designModal.classList.add('hidden');
+                    if (pricingModal.classList.contains('hidden')) {
+                        document.body.style.overflow = '';
+                    }
+                }, 300);
+            };
+
+            openDesignModalButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openDesignModal();
+                });
+            });
+
+            closeDesignModalButton.addEventListener('click', closeDesignModal);
+            designModal.addEventListener('click', (e) => {
+                if (e.target === designModal) {
+                    closeDesignModal();
+                }
+            });
+
+             // Close modals with Escape key
             window.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                    closeModal();
+                if (e.key === 'Escape') {
+                    if (!pricingModal.classList.contains('hidden')) {
+                        closePricingModal();
+                    }
+                    if (!designModal.classList.contains('hidden')) {
+                        closeDesignModal();
+                    }
                 }
             });
         });
